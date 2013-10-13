@@ -2,5 +2,6 @@
 
 (in-package #:graffiti)
 
-;;; "graffiti" goes here. Hacks and glory await!
+(defvar *graffiti* nil
+  "List of current graffiti")
 

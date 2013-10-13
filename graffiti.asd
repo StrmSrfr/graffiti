@@ -10,5 +10,6 @@
                #:hunchentoot
                #:cl-who)
   :components ((:file "package")
-               (:file "graffiti")))
+               (:file "graffiti")
+               (:file "graffito")))
 
