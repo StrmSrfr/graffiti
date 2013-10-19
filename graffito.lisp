@@ -6,7 +6,7 @@
     :initarg :ip)
    (date
     :accessor date
-    :initarg :ip)
+    :initarg :date)
    (message
     :accessor message
     :initarg :message)))
