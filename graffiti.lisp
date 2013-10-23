@@ -20,14 +20,22 @@
         (css-lite:css
           ((".graffito")
            (:border "1px solid black"
-            :padding "4px"))
+            :padding "4px"
+            :margin-top "0.5em"
+            :margin-bottom "0.5em"))
           ((".message")
            (:border-left "1px solid grey"
             :padding-left "4px"
-            :margin "0.5 em")))
+            ))
+          (("body")
+           (:font-family "Futura, Helvetica, sans-serif"))
+          (("h1")
+            (:font-family "Frutiger, Segoe, Optima, serif"))
           (("p:first-child")
            (:margin-top "0"
                         ))
+          (("pre")
+           (:font-family "Letter Gothic, Monaco, Menlo, Courier, mono"))
           (("pre:last-child")
            (:margin-bottom "0")))))
       )
