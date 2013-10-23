@@ -6,9 +6,11 @@
   :author "Samuel Edwin Ward <seward@cytochro.me>"
   :license "Public Domain"
   :depends-on (#:alexandria
+               #:cl-who
+               #:css-lite
                #:bordeaux-threads
                #:hunchentoot
-               #:cl-who)
+               )
   :components ((:file "package")
                (:file "graffiti")
                (:file "graffito")))
