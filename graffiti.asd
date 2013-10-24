@@ -9,6 +9,7 @@
                #:cl-who
                #:css-lite
                #:hunchentoot
+               #:net-telent-date
                )
   :components ((:file "package")
                (:file "graffiti" :depends-on ("graffito" "package"))

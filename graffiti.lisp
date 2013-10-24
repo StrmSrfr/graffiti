@@ -48,7 +48,8 @@
                  (:p "At "
                    (:span :class "date"
                      (str
-                       (date graffito)))
+                      (universal-time-to-http-date
+                       (date graffito))))
                    ", "
                    (:span :class "ip"
                      (str (ip graffito)))
