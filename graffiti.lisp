@@ -11,13 +11,13 @@
 
 (hunchentoot:define-easy-handler (index :uri "/") ()
   (setf (hunchentoot:content-type*) "text/html")
-  (cl-who:with-html-output-to-string (s)
+  (with-html-output-to-string (s)
     (:html
      (:head
       (:title "Graffiti 2.0: New and improved!")
       (:style
-       (cl-who:str
-        (css-lite:css
+       (str
+        (css
           ((".graffito")
            (:border "1px solid black"
             :padding "4px"
@@ -43,18 +43,19 @@
       (:h1 "Graffiti")
       (:div :id "content"
        (loop for graffito in *graffiti*
-            do (cl-who:htm
+            do (htm
                 (:div :class "graffito"
                  (:p "At "
                    (:span :class "date"
-                     (cl-who:str (date graffito)))
+                     (str
+                       (date graffito)))
                    ", "
                    (:span :class "ip"
-                     (cl-who:str (ip graffito)))
+                     (str (ip graffito)))
                    " wrote:")
                  (:pre :class "message"
-                   (cl-who:str (cl-who:escape-string
-                                (message graffito))))))))
+                   (str (cl-who:escape-string
+                         (message graffito))))))))
       ))))
 
 (defvar *acceptor* nil
