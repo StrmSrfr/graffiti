@@ -10,6 +10,7 @@
                #:css-lite
                #:hunchentoot
                #:net-telent-date
+               #:split-sequence
                )
   :components ((:file "package")
                (:file "graffiti" :depends-on ("graffito" "package"))

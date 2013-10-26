@@ -3,10 +3,7 @@
 (in-package #:graffiti)
 
 (defvar *graffiti* 
-  (list (make-instance 'graffito
-                       :date 0
-                       :ip "127.0.0.1"
-                       :message "Hello again, World!"))
+  nil
   "List of current graffiti")
 
 (hunchentoot:define-easy-handler (index :uri "/") ()
@@ -66,5 +63,6 @@
   "Port to listen on.")
 
 (defun start ()
+  (load-graffiti-from-file)
   (setf *acceptor*
         (hunchentoot:start (make-instance 'hunchentoot:easy-acceptor :port *port*))))
